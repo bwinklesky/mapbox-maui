@@ -23,10 +23,10 @@ jobs:
       env:
         NETRC : ${{secrets.NETRC}}
 
-    - name: Setup .NET Core SDK 8.0
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '8.0'
+    # - name: Setup .NET Core SDK 9.0
+    #   uses: actions/setup-dotnet@v3
+    #   with:
+    #     dotnet-version: '9.0'
 
     - name: Install ios workload
       run: |
@@ -41,7 +41,7 @@ jobs:
     - name: Xcode Select Version
       uses: mobiledevops/xcode-select-version-action@v1
       with:
-        xcode-select-version: 15.1
+        xcode-select-version: 15.4
 
     - name: Set MAPBOX_DOWNLOADS_TOKEN
       if: contains(${{ inputs.LIB_ARTIFACT }}, 'com.mapbox.maps')
