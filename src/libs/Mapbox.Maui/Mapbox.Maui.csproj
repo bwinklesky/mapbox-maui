@@ -10,13 +10,13 @@
   </Target>
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0;net8.0-android;net8.0-ios;</TargetFrameworks>
+    <TargetFrameworks>net10.0;net10.0-android;net10.0-ios;</TargetFrameworks>
     <UseMaui>true</UseMaui>
     <SingleProject>true</SingleProject>
     <ImplicitUsings>enable</ImplicitUsings>
 
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.4</SupportedOSPlatformVersion>
-    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">26.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">27.0</SupportedOSPlatformVersion>
     <RootNamespace>MapboxMaui</RootNamespace>
     <SkipValidateMauiImplicitPackageReferences>true</SkipValidateMauiImplicitPackageReferences>
   </PropertyGroup>
@@ -50,9 +50,9 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <AndroidTargetSdkVersion>34</AndroidTargetSdkVersion>
-    <AndroidSdkDirectory Condition=" '$(OS)' == 'Unix' ">$(Home)/Library/Android/sdk</AndroidSdkDirectory>
-    <AndroidSdkDirectory Condition=" '$(OS)' != 'Unix' ">$(UserProfile)/AppData/Local/Android/sdk</AndroidSdkDirectory>
+    <AndroidTargetSdkVersion>36</AndroidTargetSdkVersion>
+    <!--<AndroidSdkDirectory Condition=" '$(OS)' == 'Unix' ">$(Home)/Library/Android/sdk</AndroidSdkDirectory>
+    <AndroidSdkDirectory Condition=" '$(OS)' != 'Unix' ">$(UserProfile)/AppData/Local/Android/sdk</AndroidSdkDirectory>-->
   </PropertyGroup>
 
   <PropertyGroup>
@@ -85,15 +85,15 @@
           Pack="True"
           PackagePath="README.md" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug"
-                      Version="9.0.0" />
+                      Version="10.0.0" />
     <PackageReference Include="Xamarin.Build.Download"
                       Version="0.11.4" />
     <PackageReference Include="GeoJSON.Text"
                       Version="1.1.0" />
     <PackageReference Include="Microsoft.Maui.Controls"
-                      Version="8.0.100" />
+                      Version="$(MauiVersion)" />
     <PackageReference Update="Microsoft.Maui.Controls.Compatibility"
-                      Version="8.0.100" />
+                       Version="$(MauiVersion)" />
   </ItemGroup>
   <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
     <PackageReference Include="MapboxMapsObjC.iOS"
@@ -115,11 +115,8 @@
       <ExcludeFromCurrentConfiguration>false</ExcludeFromCurrentConfiguration>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="Xamarin.AndroidX.Fragment"
-                      Version="1.8.5.1" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0-android'">
     <PackageReference Include="Com.Mapbox.Maps.AndroidNdk27" Version="11.15.2" />
   </ItemGroup>
   <ProjectExtensions>
@@ -132,8 +129,8 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <Target Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'"
+  <!--<Target Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'"
           Name="_GradleDependencyResolverTrigger"
           DependsOnTargets="_GradleSync"
-          BeforeTargets="_BuildLibraryImportsCache" />
+          BeforeTargets="_BuildLibraryImportsCache" />-->
 </Project>
