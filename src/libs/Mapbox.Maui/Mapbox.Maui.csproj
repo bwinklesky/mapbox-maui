@@ -67,7 +67,7 @@
     <RepositoryUrl>https://github.com/tuyen-vuduc/mapbox-maui</RepositoryUrl>
     <PackageProjectUrl>https://mapbox.tuyen-vuduc.tech</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageVersion>11.8.0</PackageVersion>
+    <PackageVersion>11.9.0</PackageVersion>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>tv-mapbox.png</PackageIcon>
@@ -96,6 +96,12 @@
     <PackageReference Update="Microsoft.Maui.Controls.Compatibility"
                        Version="$(MauiVersion)" />
   </ItemGroup>
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
+    <PackageReference Include="MapboxMapsObjC.iOS"
+                      Version="11.9.0" />
+    <PackageReference Include="MapboxMaps.iOS"
+                      Version="11.9.0" />
+  </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Gestures\" />
   </ItemGroup>
@@ -113,11 +119,6 @@
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net10.0-android'">
     <PackageReference Include="Com.Mapbox.Maps.AndroidNdk27" Version="11.15.2" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0-ios'">
-    <PackageReference Include="MapboxMaps.iOS" Version="11.8.0" />
-    <PackageReference Include="MapboxMapsObjC.iOS" Version="11.8.0" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
