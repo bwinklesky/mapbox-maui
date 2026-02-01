@@ -12,7 +12,7 @@ public static class QueriedFeatureExtensions
             Layers = src.Layers,
         };
     public static QueriedFeature ToX(this MBMQueriedFeature src)
-        => new QueriedFeature
+        => new()
         {
             Feature = src.Feature.ToX(),
             Source = src.Source,
