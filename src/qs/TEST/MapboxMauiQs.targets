@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	<ItemGroup>
+		<GradleRepository Include="https://api.mapbox.com/downloads/v2/releases/maven">
+			<Repository>
+				maven {
+					url = uri("https://api.mapbox.com/downloads/v2/releases/maven")
+				}
+			</Repository>
+		</GradleRepository>
+	</ItemGroup>
+</Project>

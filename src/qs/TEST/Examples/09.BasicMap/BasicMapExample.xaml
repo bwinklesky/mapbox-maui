@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mb="clr-namespace:MapboxMaui"
+    x:Class="MapboxMauiQs.BasicMapExample"
+    Title="BasicMapExample">
+    <Grid>
+        <mb:MapboxView
+            x:Name="map" />
+
+        <Button
+            Clicked="Button_Clicked"
+            Text="Next Page"
+            VerticalOptions="End"
+            HorizontalOptions="End"
+            Margin="16"/>
+    </Grid>
+</ContentPage>

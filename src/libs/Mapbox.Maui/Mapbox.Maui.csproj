@@ -20,9 +20,10 @@
     <RootNamespace>MapboxMaui</RootNamespace>
     <SkipValidateMauiImplicitPackageReferences>true</SkipValidateMauiImplicitPackageReferences>
   </PropertyGroup>
-
+  
   <PropertyGroup Condition="$(TargetFramework.Contains('-ios'))">
     <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+    <AppBundleExtraOptions>--optimize=-register-protocols</AppBundleExtraOptions>
   </PropertyGroup>
 
   <!-- Android -->
@@ -97,9 +98,9 @@
   </ItemGroup>
   <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
     <PackageReference Include="MapboxMapsObjC.iOS"
-                      Version="11.8.0" />
+                      Version="11.8.1" />
     <PackageReference Include="MapboxMaps.iOS"
-                      Version="11.8.0" />
+                      Version="11.8.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Gestures\" />
