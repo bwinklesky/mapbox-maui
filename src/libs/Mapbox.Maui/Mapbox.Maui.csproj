@@ -98,9 +98,9 @@
   </ItemGroup>
   <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
     <PackageReference Include="MapboxMapsObjC.iOS"
-                      Version="11.18.1" />
+                      Version="11.9.0" />
     <PackageReference Include="MapboxMaps.iOS"
-                      Version="11.18.1" />
+                      Version="11.9.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Gestures\" />
