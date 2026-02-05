@@ -18,9 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{F2528DCC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEST", "src\qs\TEST\TEST.csproj", "{F81C2571-A6B4-434D-A57B-7BFD9D13A2D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapboxCommon.iOS", "..\mapbox-ios-binding\libs\MapboxCommon.iOS\MapboxCommon.iOS.csproj", "{9A684AE6-9203-43B0-9605-6540299FDD51}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiApp1", "MauiApp1\MauiApp1.csproj", "{8A506577-4472-4767-B53B-AAE018CC1C0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOSBinding1", "iOSBinding1\iOSBinding1.csproj", "{9A3ED778-AA6D-4965-87B3-78A4DFDFD271}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,14 +42,14 @@ Global
 		{F81C2571-A6B4-434D-A57B-7BFD9D13A2D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F81C2571-A6B4-434D-A57B-7BFD9D13A2D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F81C2571-A6B4-434D-A57B-7BFD9D13A2D8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9A684AE6-9203-43B0-9605-6540299FDD51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A684AE6-9203-43B0-9605-6540299FDD51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A684AE6-9203-43B0-9605-6540299FDD51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A684AE6-9203-43B0-9605-6540299FDD51}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8A506577-4472-4767-B53B-AAE018CC1C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8A506577-4472-4767-B53B-AAE018CC1C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A506577-4472-4767-B53B-AAE018CC1C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A506577-4472-4767-B53B-AAE018CC1C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A3ED778-AA6D-4965-87B3-78A4DFDFD271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A3ED778-AA6D-4965-87B3-78A4DFDFD271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A3ED778-AA6D-4965-87B3-78A4DFDFD271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A3ED778-AA6D-4965-87B3-78A4DFDFD271}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

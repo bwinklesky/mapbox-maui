@@ -212,7 +212,7 @@ public static class GeometryExtensions
         throw new NotSupportedException("Invalid geometry type");
     }
 
-    internal static Feature ToX(this MBXFeature src)
+    internal static GeoJSON.Text.Feature.Feature ToX(this MBXFeature src)
     {
         var geometry = src.Geometry.ToX();
 
@@ -224,7 +224,7 @@ public static class GeometryExtensions
             );
         var properties = new Dictionary<string, object>(kvPairs);
 
-        return new Feature(geometry, properties, src.Identifier?.ToString());
+        return new GeoJSON.Text.Feature.Feature(geometry, properties, src.Identifier?.ToString());
     }
 }
 
