@@ -112,8 +112,8 @@
     <Folder Include="Examples\Annotations\" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net10.0-ios'">
-    <PackageReference Include="MapboxMaps.iOS" Version="11.9.0" />
-    <PackageReference Include="MapboxMapsObjC.iOS" Version="11.9.0" />
+    <PackageReference Include="MapboxMaps.iOS" Version="11.10.0" />
+    <PackageReference Include="MapboxMapsObjC.iOS" Version="11.10.0" />
   </ItemGroup>
 
   <Target Name="DisplayMessages" BeforeTargets="PrepareForILLink">
